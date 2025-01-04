@@ -1,20 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./FloodMonitoring.css";
-
-interface FloodData {
-  id: string;
-  description: string;
-  eaAreaName: string;
-  floodArea: {
-    county: string;
-    riverOrSea: string;
-  };
-  message: string;
-  severity: string;
-  severityLevel: number;
-  timeMessageChanged: string;
-}
+import "../styles/FloodMonitoring.css";
+import { FloodData } from "../types/FloodData";
 
 const CACHE_KEY = "floodData";
 const CACHE_TIMESTAMP_KEY = "floodDataTimestamp";
